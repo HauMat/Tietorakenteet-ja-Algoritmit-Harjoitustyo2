@@ -6,7 +6,7 @@ public class Ehdokas {
     private int äänet;
     private double vertailuluku;
 
-
+    //Tehdään olio, joka tarvitsee tarvitsee tietoa. Vertailuluku jätetään pois, koska se asetetaan myöhemmin
     public Ehdokas(String etunimi, String sukunimi, String puolue, int äänet){
         this.etunimi = etunimi;
         this.sukunimi = sukunimi;
@@ -15,12 +15,14 @@ public class Ehdokas {
         this.vertailuluku = 0;
     }
 
+    //Tulostetaan olion tiedot
     @Override
     public String toString(){
         return etunimi +" "+ sukunimi + ", Puolue: " +
         puolue + ", Äänimäärä: " + äänet + ",  Vertailuluku: " + vertailuluku;
     }
 
+    //Getterit
     public String getFullName(){
         return etunimi + " " + sukunimi;
     }
@@ -45,7 +47,7 @@ public class Ehdokas {
     public double getVert(){
         return vertailuluku;
     }
-
+    //Setteri vertailuluvulle
     public void setVert(double luku){
         this.vertailuluku = luku;        
     }
